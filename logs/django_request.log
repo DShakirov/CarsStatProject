@@ -1,0 +1,225 @@
+ERROR 2023-04-05 21:05:17,998 log 108 139828565837376 Internal Server Error: /cars/1097475252
+Traceback (most recent call last):
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 1070, in render
+    return render_value_in_context(output, context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 1047, in render_value_in_context
+    value = str(value)
+  File "/mnt/d/Python/CarsStatProject/carsstatproject/carsstat/models.py", line 23, in __str__
+    return engines['self.type']
+KeyError: 'self.type'
+WARNING 2023-04-05 21:05:21,947 log 108 139828565837376 Not Found: /favicon.ico
+ERROR 2023-04-05 21:21:08,937 log 154 140332612060736 Internal Server Error: /cars/1116623262
+Traceback (most recent call last):
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 1070, in render
+    return render_value_in_context(output, context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 1047, in render_value_in_context
+    value = str(value)
+  File "/mnt/d/Python/CarsStatProject/carsstatproject/carsstat/models.py", line 121, in __str__
+    return gears[self.type]
+UnboundLocalError: local variable 'gears' referenced before assignment
+ERROR 2023-04-05 21:21:14,390 log 154 140332612060736 Internal Server Error: /cars/1116623262
+Traceback (most recent call last):
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 1070, in render
+    return render_value_in_context(output, context)
+  File "/mnt/d/Python/CarsStatProject/linux/lib/python3.10/site-packages/django/template/base.py", line 1047, in render_value_in_context
+    value = str(value)
+  File "/mnt/d/Python/CarsStatProject/carsstatproject/carsstat/models.py", line 121, in __str__
+    return gears[self.type]
+UnboundLocalError: local variable 'gears' referenced before assignment
+WARNING 2023-04-06 20:07:55,952 log 3732 10580 Not Found: /favicon.ico
+ERROR 2023-04-06 20:33:25,959 log 1752 3668 Internal Server Error: /admin/carsstat/news/1/change/
+Traceback (most recent call last):
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: carsstat_news.on_top
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\contrib\admin\options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\contrib\admin\options.py", line 1893, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\contrib\admin\options.py", line 1750, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\contrib\admin\options.py", line 1773, in _changeform_view
+    obj = self.get_object(request, unquote(object_id), to_field)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\contrib\admin\options.py", line 864, in get_object
+    return queryset.get(**{field.name: object_id})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\db\models\query.py", line 646, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\db\models\query.py", line 376, in __len__
+    self._fetch_all()
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\db\models\query.py", line 1867, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\db\models\query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\CarsStatProject\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: carsstat_news.on_top
