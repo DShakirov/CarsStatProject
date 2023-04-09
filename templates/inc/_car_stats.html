@@ -1,0 +1,49 @@
+  {% for mark in marks %}
+
+      <div class="box">
+        <h2>{{ mark }}</h2>
+        <ul>
+          <li>
+            <div class="info">
+                <p><a href="{{mark.get_absolute_url}}">{{ mark }}</a></p>
+                <p><a href="{% url 'car_model' pk=mark.modelname_id%}">{{ mark.markname }} {{ mark.modelname }}</a><p>
+                <p><a href="{% url 'generation' pk=mark.gen_id%}">{{ mark.genname }} {{mark.year_from}}-{{mark.year_to}}</a></p>
+                <p>Средняя цена {{ mark.avg_price }} р.</p>
+                <p>{{ mark.counter }} автомобилей в продаже</p>
+            </div>
+</li>
+
+        </ul>
+
+        <div class="cl">&nbsp;</div>
+      </div>
+
+
+
+  {% endfor %}
+    <!-- Pagination -->
+      {% if page_obj.has_other_pages %}
+      <div class="container">
+        <ul class="pagination">
+          {% if page_obj.has_previous %}
+          <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"><span aria-hidden="true">«</span></a></li>
+          {% endif %}
+
+          {% for p in page_obj.paginator.page_range %}
+                 {% if page_obj.number == p %}
+          <li class="page-item active"><a class="page-link" href="?page={{p}}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">{{p}}</a></li>
+
+                  {% elif p > page_obj.number|add:-3 and p < page_obj.number|add:3 %}
+                  <li class="page-item"><a class="page-link" href="?page={{p}}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">{{p}}</a></li>
+
+                  {% endif %}
+          {% endfor %}
+
+          {% if page_obj.has_next%}
+          <li class="page-item"><a class="page-link" href="?page={{page_obj.next_page_number}}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"><span aria-hidden="true">»</span></a></li>
+          {% endif %}
+        </ul>
+      </div>
+
+      {% endif %}
+            <!-- EndPagination -->

@@ -1,0 +1,25 @@
+<!-- Sidebar -->
+    <div id="sidebar">
+      <!-- Search -->
+      <form action="{%url 'search' %}" class="search" method="get">
+          <div class="cl">
+              <input type="text" name="q" class="field blink" title="Марка или модель" /></div>
+        <div class="btnp">
+          <input type="submit" value="Go!" />
+        </div>
+        <div class="cl">&nbsp;</div>
+      </form>
+      <!-- End Search -->
+
+      <!-- Box Popular -->
+
+      {% include 'inc/_popular.html' %}
+      <!-- End Box Popular -->
+      <!-- Box Most Expensive -->
+    {% include 'inc/_most_expensive.html' %}
+      <!-- End Box Most Expensive -->
+      <!-- Box Most Cheap -->
+      {% include 'inc/_most_cheap.html' %}
+      <!-- End Box Most Cheap -->
+    </div>
+    <!-- End Sidebar -->

@@ -1,0 +1,50 @@
+    {% if cars %}
+      <div class="box">
+        <h2>{{ title }}</h2>
+          {% if counter%}
+          <h4>{{ counter }} автомобилей в продаже</h4>
+          {% endif %}
+        <ul>
+            {% for car in cars%}
+          <li> <a href="{{ car.get_absolute_url }}" class="image"><img src="{{car.images.all.0.image_link}}" alt="" height="300"/></a>
+            <div class="info">
+                <h4><a href="{{ car.mark.get_absolute_url }}">{{ car.mark }}</a></h4>
+                <p><a href="{{ car.car_model.get_absolute_url }}">{{ car.car_model }}</a></p>
+                <p><a href="{{  car.generation.get_absolute_url }}">{{car.generation}}</a></p>
+              <p>{{ car.year }}</p>
+                <p> {{car.price }} </p>
+
+                <a href="{{ car.get_absolute_url }}"  class="up">Подробнее</a> </div>
+            <div class="cl">&nbsp;</div>
+          </li>
+            {% endfor %}
+        </ul>
+          <!-- Pagination -->
+      {% if page_obj.has_other_pages %}
+      <div class="container">
+        <ul class="pagination">
+          {% if page_obj.has_previous %}
+          <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"><span aria-hidden="true">«</span></a></li>
+          {% endif %}
+
+          {% for p in page_obj.paginator.page_range %}
+                 {% if page_obj.number == p %}
+          <li class="page-item active"><a class="page-link" href="?page={{p}}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">{{p}}</a></li>
+
+                  {% elif p > page_obj.number|add:-3 and p < page_obj.number|add:3 %}
+                  <li class="page-item"><a class="page-link" href="?page={{p}}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">{{p}}</a></li>
+
+                  {% endif %}
+          {% endfor %}
+
+          {% if page_obj.has_next%}
+          <li class="page-item"><a class="page-link" href="?page={{page_obj.next_page_number}}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"><span aria-hidden="true">»</span></a></li>
+          {% endif %}
+        </ul>
+      </div>
+
+      {% endif %}
+          <!-- EndPagination -->
+        <div class="cl">&nbsp;</div>
+      </div>
+    {% endif %}
