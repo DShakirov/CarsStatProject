@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 DEBUG = int(os.getenv('DJANGO_DEBUG', default=0))
 #DEBUG = True
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split()
+ALLOWED_HOSTS = ["*"]
 #ALLOWED_HOSTS = ['localhost']
 
 # Application definition
