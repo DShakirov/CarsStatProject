@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+  <div id="content">
+    {% include 'inc/_sidebar.html'%}
+
+    <!-- Main -->
+    <div id="main">
+      <!-- Top Image -->
+      <div class="cl">&nbsp;</div>
+      <!-- End Top Image -->
+
+<div class="box">
+        <h2>{{ title }}</h2>
+    {% if images %}
+   <div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{ start_image }}" class="d-block w-100" alt="...">
+    </div>
+    {% for image in images %}
+      <div class="carousel-item">
+      <img src="{{ image }}" class="d-block w-100" alt="...">
+    </div>
+      {% endfor %}
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+    {% else %}
+    <img src="{{ start_image }}" class="d-block w-100" alt="...">
+    {% endif %}
+            <div class="info">
+                <h4><a href="{{ car.car_model.get_absolute_url }}">{{ car.mark }} {{ car.car_model }} {{ car.price}} руб.</a></h4>
+                <ul>
+              <li><a href="{{ car.generation.get_absolute_url }}">{{ car.generation }}</a><li>
+              <li>Год выпуска: {{ car.year }}</li>
+              <li>Пробег: {{ car.mileage }} км.</li>
+              <li>Цена: {{car.price }} рублей.</li>
+              <li>Двигатель: {{ car.engine_type }} {{car.engine_displacement}} см3, {{ car.engine_power }} л.с.</li>
+              <li>Коробка передач: {{ car.transmission }}</li>
+              <li>Привод: {{ car.gear }}</li>
+              <li>Средняя цена подобного автомобиля: {{ car.avg_price }} рублей.</li>
+              <li>Город: {{ car.region }} </li>
+              <li>Владельцев: {{ car.owners_count }}</li>
+              <li>В продаже с: {{ car.created_at }}</li>
+              <li><a href="{{ car.link }}">Оригинал объявления</a></li>
+                </ul>
+    </div>
+            <div class="cl">&nbsp;</div>
+        <a href="{% url 'main' %}" class="up">На главную</a>
+        <div class="cl">&nbsp;</div>
+      </div>
+    </div>
+    <!-- End Main -->
+    <div class="cl">&nbsp;</div>
+  </div>
+{% endblock %}
+
+{% block footer %}
+{% include 'inc/_footer.html'%}
+{% endblock %}

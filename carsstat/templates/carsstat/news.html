@@ -1,0 +1,68 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+  <div id="content">
+    {% include 'inc/_sidebar.html'%}
+
+    <!-- Main -->
+    <div id="main">
+      <!-- Top Image -->
+      <div class="cl">&nbsp;</div>
+     {% if news %}
+      <div class="box">
+        <h2>Новости</h2>
+        <ul>
+            {% for item in news %}
+          <li> <a href="{{ item.get_absolute_url }}" class="image"><img src="{{ item.photo.url }}" alt="" /></a>
+            <div class="info">
+              <h4><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></h4>
+              <p>{{ item.content | truncatewords_html:50 }}</p>
+              <a class="up" href="{{ item.get_absolute_url }}">read more</a> </div>
+            <div class="cl">&nbsp;</div>
+          </li>
+           {% endfor %}
+        </ul>
+
+          <!-- Pagination -->
+      {% if page_obj.has_other_pages %}
+      <div class="container">
+        <ul class="pagination">
+          {% if page_obj.has_previous %}
+          <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}"><span aria-hidden="true">«</span></a></li>
+          {% endif %}
+
+          {% for p in page_obj.paginator.page_range %}
+                 {% if page_obj.number == p %}
+          <li class="page-item active"><a class="page-link" href="?page={{p}}">{{p}}</a></li>
+
+                  {% elif p > page_obj.number|add:-3 and p < page_obj.number|add:3 %}
+                  <li class="page-item"><a class="page-link" href="?page={{p}}">{{p}}</a></li>
+
+                  {% endif %}
+          {% endfor %}
+
+          {% if page_obj.has_next%}
+          <li class="page-item"><a class="page-link" href="?page={{page_obj.next_page_number}}"><span aria-hidden="true">»</span></a></li>
+          {% endif %}
+        </ul>
+      </div>
+
+      {% endif %}
+          <!-- EndPagination -->
+
+     {% endif %}
+    </div>
+    <!-- End Main -->
+    <div class="cl">&nbsp;</div>
+  </div>
+{% endblock %}
+
+{% block footer %}
+{% include 'inc/_footer.html'%}
+{% endblock %}
+

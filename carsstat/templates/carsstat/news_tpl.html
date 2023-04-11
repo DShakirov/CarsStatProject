@@ -1,0 +1,19 @@
+     {% if news%}
+      <div class="box">
+        <h2>Новости</h2>
+        <ul>
+            {% for item in news %}
+          <li> <a href="{{ item.get_absolute_url }}" class="image"><img src="{{ item.photo.url }}" alt="" /></a>
+            <div class="info">
+              <h4><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></h4>
+              <p>{{ item.content | truncatewords_html:50 }}</p>
+              <a class="up" href="{{ item.get_absolute_url }}">read more</a> </div>
+            <div class="cl">&nbsp;</div>
+          </li>
+           {% endfor %}
+        </ul>
+
+        <a href="{% url 'news_list' %}" class="up">Далее</a>
+        <div class="cl">&nbsp;</div>
+      </div>
+     {% endif %}

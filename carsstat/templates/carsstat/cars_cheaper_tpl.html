@@ -1,0 +1,21 @@
+    {% if cars %}
+      <div class="box">
+        <h2>Автомобили дешевле рынка</h2>
+        <ul>
+            {% for car in cars %}
+          <li> <a href="{{car.get_absolute_url}}" class="image"><img src="{{car.images.all.0.image_link}}" alt="" height="300"/></a>
+            <div class="info">
+              <h4><a href="{{ car.mark.get_absolute_url }}">{{ car.mark }}</a></h4>
+              <p><a href="{{ car.car_model.get_absolute_url }}">{{ car.car_model }}</a></p>
+              <p>{{ car.year }}</p>
+                <p> {{car.price }} </p>
+
+                <a href="{{ car.get_absolute_url }}"  class="up">read more</a> </div>
+            <div class="cl">&nbsp;</div>
+          </li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'cheaper' %}" class="up">Подробнее</a>
+        <div class="cl">&nbsp;</div>
+      </div>
+    {% endif %}

@@ -1,0 +1,23 @@
+  {% if models %}
+      <div class="box">
+        <h2>Самые популярные</h2>
+        <ul>
+            {% for model in models %}
+          <li>
+            <div class="info">
+                <p><a href="{%url 'car_model' pk=model.carmodel_id%}">{{ model.markname }} {{ model.carmodel }}</a></p>
+                {% if model.carmodel != model.name %}
+                <p><a href="{{ model.get_absolute_url }}">{{ model.carmodel }} {{model.name}}</a></p>
+                {% else %}
+                <p><a href="{{ model.get_absolute_url }}">{{ model.carmodel }}</a></p>
+                {% endif %}
+                <p>{{ model.counter }} автомобиль(ей) в продаже </p>
+            </div>
+            <div class="cl">&nbsp;</div>
+          </li>
+{% endfor %}
+        </ul>
+        <a href="{% url 'most_popular' %}" class="up">Подробнее</a>
+        <div class="cl">&nbsp;</div>
+      </div>
+  {% endif %}

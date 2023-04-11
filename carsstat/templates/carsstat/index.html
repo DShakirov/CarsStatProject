@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+  <div id="content">
+    {% include 'inc/_sidebar.html'%}
+
+    <!-- Main -->
+    <div id="main">
+      <!-- Top Image -->
+      <div class="cl">&nbsp;</div>
+      <!-- End Top Image -->
+      <!-- Box -->
+{% include 'inc/_news.html'%}
+      <!-- End Box -->
+      <!-- Box -->
+{% include 'inc/_cars_cheaper_than_usual.html'%}
+      <!-- End Box -->
+    </div>
+    <!-- End Main -->
+    <div class="cl">&nbsp;</div>
+  </div>
+{% endblock %}
+
+{% block footer %}
+{% include 'inc/_footer.html'%}
+{% endblock %}

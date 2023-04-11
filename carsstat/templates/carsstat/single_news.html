@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+  <div id="content">
+    {% include 'inc/_sidebar.html'%}
+
+    <!-- Main -->
+    <div id="main">
+      <!-- Top Image -->
+      <div class="cl">&nbsp;</div>
+      <!-- End Top Image -->
+      <!-- Box -->
+
+      <div class="box">
+              <h2>{{ news.title }}</h2>
+        <ul>
+
+          <li> <img src="{{ news.photo.url }}" alt="" />
+            <div class="info">
+              <h4>{{ news.title }}</h4>
+              <p>{{ news.content }}</p>
+             </div>
+            <div class="cl">&nbsp;</div>
+          </li>
+
+        </ul>
+
+        <a href="{% url 'news_list' %}" class="up">К списку новостей</a>
+        <div class="cl">&nbsp;</div>
+      </div>
+
+
+      <!-- End Box -->
+    </div>
+    <!-- End Main -->
+    <div class="cl">&nbsp;</div>
+  </div>
+{% endblock %}
+
+{% block footer %}
+{% include 'inc/_footer.html'%}
+{% endblock %}

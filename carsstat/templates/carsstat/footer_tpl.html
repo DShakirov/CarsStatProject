@@ -1,0 +1,14 @@
+  <!-- Footer -->
+  <div id="footer">
+          <!-- Navigation -->
+    <div id="nav">
+      <ul>
+          {% for mark in marks %}
+        <li><a href="{{ mark.get_absolute_url }}">{{ mark.name }}</a></li>
+          {% endfor %}
+      </ul>
+    </div>
+    <!-- End Navigation -->
+      <p>&copy; Идея и разработка <a href="mailto:shakirovdominatus@gmail.com">Дмитрий Шакиров</a></p>
+  </div>
+  <!-- End Footer -->

@@ -1,0 +1,19 @@
+ {% if cars %}
+  <div class="box">
+        <h2>Самые дорогие</h2>
+        <ul>
+          {% for car in cars %}
+          <li> <a href="{{car.get_absolute_url}}" class="image"><img src="{{car.images.all.0.image_link}}" alt="" height="150"/></a>
+            <div class="info">
+              <h5><a href="{{car.get_absolute_url}}">{{ car.mark }}</a></h5>
+              <p>{{ car.car_model.name }} {{ car.year }} {{ car.price }} руб</p>
+            </div>
+            <div class="cl">&nbsp;</div>
+          </li>
+
+          {% endfor%}
+        </ul>
+        <a href="#" class="up">See more</a>
+        <div class="cl">&nbsp;</div>
+      </div>
+ {% endif %}
