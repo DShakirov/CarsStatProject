@@ -2,7 +2,8 @@ import os
 
 from celery import Celery
 from celery.schedules import crontab
-from settings import *
+
+from carsstatproject.settings import CELERY_BROKER_URL
 
 # Set the default Django settings module for the 'celery' program.
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'carsstatproject.settings')
