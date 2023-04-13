@@ -8,7 +8,8 @@ from carsstatproject.settings import CELERY_BROKER_URL
 # Set the default Django settings module for the 'celery' program.
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'carsstatproject.settings')
 
-app = Celery('carsstatproject', broker=CELERY_BROKER_URL)
+#app = Celery('carsstatproject')
+app = Celery('CarsStatProject')
 
 # Using a string here means the worker doesn't have to serialize
 # the configuration object to child processes.
