@@ -141,7 +141,7 @@ STATICFILES_DIRS = []
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # ----->Celery
-REDIS_HOST = "0.0.0.0"
+REDIS_HOST = "127.0.0.1"
 REDIS_PORT = "6379"
 CELERY_TIMEZONE = 'Europe/Moscow'
 CELERY_BROKER_URL = "redis://" + REDIS_HOST + ":" + REDIS_PORT + "/0"
