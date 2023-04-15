@@ -16,7 +16,7 @@ class Engine(models.Model):
         engines = {
             "GASOLINE": "Бензиновый",
             "DIESEL": "Дизельный",
-            "HYBRYD": "Гибридный",
+            "HYBRID": "Гибридный",
             "ELECTRO": "Электродвигатель",
             "LPG": "СНГ, сжиженный нефтяной газ"
         }
