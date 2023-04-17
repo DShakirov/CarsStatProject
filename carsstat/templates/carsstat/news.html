@@ -22,7 +22,7 @@
             <div class="info">
               <h4><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></h4>
               <p>{{ item.content | truncatewords_html:50 }}</p>
-              <a class="up" href="{{ item.get_absolute_url }}">read more</a> </div>
+              <a class="up" href="{{ item.get_absolute_url }}">Подробнее</a> </div>
             <div class="cl">&nbsp;</div>
           </li>
            {% endfor %}
@@ -65,4 +65,3 @@
 {% block footer %}
 {% include 'inc/_footer.html'%}
 {% endblock %}
-
