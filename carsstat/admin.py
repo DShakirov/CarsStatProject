@@ -51,7 +51,7 @@ class RegionAdmin(admin.ModelAdmin):
 
 class CarAdmin(admin.ModelAdmin):
     save_on_top = True
-    list_display = ['mark', 'car_model', 'transmission', 'engine_type', 'engine_displacement', 'year', 'price']
+    list_display = ['mark', 'car_model', 'transmission', 'engine_type', 'engine_displacement', 'year', 'price', 'created_at', 'updated_at']
     list_display_links = ['mark', 'car_model']
     search_fields = ['mark', 'car_model', 'year', 'price', 'engine_type', 'transmission']
     list_filter = ['mark', 'transmission', 'engine_type']

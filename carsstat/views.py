@@ -174,7 +174,7 @@ class GetPopularCarModels(ListView):
             'SELECT gen.id, gen.name, COUNT(*) AS counter, model.name AS carmodel, model.id AS carmodel_id, mark.name AS markname FROM '
             'carsstat_car AS car JOIN carsstat_generation AS gen ON car.generation_id = gen.id JOIN carsstat_carmodel '
             'AS model ON car.car_model_id = model.id JOIN carsstat_mark AS mark ON car.mark_id=mark.id'
-            'GROUP BY gen.id ORDER BY COUNT(*) DESC'
+            'GROUP BY gen.id, model.id, mark.id ORDER BY COUNT(*) DESC'
                                     )
         return object_list
 
@@ -243,6 +243,9 @@ class GetCarsStats(ListView):
         return context
     def get_queryset(self):
         object_list = Mark.objects.raw(
-            'SELECT mark.id, mark.name AS markname, model.id AS modelname_id,model.name AS modelname, gen.id AS gen_id, gen.name AS genname, gen.year_from AS year_from, gen.year_to AS year_to, COUNT(*) AS counter,SUM(car.price)/COUNT(*) AS avg_price FROM carsstat_car AS car JOIN carsstat_mark AS mark ON car.mark_id = mark.id JOIN carsstat_carmodel AS model ON car.car_model_id = model.id JOIN carsstat_generation AS gen ON car.generation_id = gen.id GROUP BY genname ORDER BY markname, modelname, year_to')
+            'SELECT mark.id, mark.name AS markname, model.id AS modelname_id,model.name AS modelname, gen.id AS gen_id, gen.name AS genname, gen.year_from AS year_from, gen.year_to AS year_to, COUNT(*) AS counter,SUM(car.price)/COUNT(*) AS avg_price '
+            'FROM carsstat_car AS car JOIN carsstat_mark AS mark ON car.mark_id = mark.id '
+            'JOIN carsstat_carmodel AS model ON car.car_model_id = model.id JOIN carsstat_generation AS gen ON car.generation_id = gen.id '
+            'GROUP BY genname, mark.id, model.id ORDER BY markname, modelname, year_to')
         return object_list
 
