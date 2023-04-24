@@ -39,15 +39,15 @@ def parse():
             'Content-Length': '137',
             'content-type': 'application/json',
             #рабочий куки
-            #'Cookie': '_csrf_token=1c0ed592ec162073ac34d79ce511f0e50d195f763abd8c24; autoru_sid=a%3Ag5e3b198b299o5jhpv6nlk0ro4daqbpf.fa3630dbc880ea80147c661111fb3270%7C1580931467355.604800.8HnYnADZ6dSuzP1gctE0Fw.cd59AHgDSjoJxSYHCHfDUoj-f2orbR5pKj6U0ddu1G4; autoruuid=g5e3b198b299o5jhpv6nlk0ro4daqbpf.fa3630dbc880ea80147c661111fb3270; suid=48a075680eac323f3f9ad5304157467a.bc50c5bde34519f174ccdba0bd791787; from_lifetime=1580933172327; from=yandex; X-Vertis-DC=myt; crookie=bp+bI7U7P7sm6q0mpUwAgWZrbzx3jePMKp8OPHqMwu9FdPseXCTs3bUqyAjp1fRRTDJ9Z5RZEdQLKToDLIpc7dWxb90=; gids=977; cmtchd=MTU4MDkzMTQ3MjU0NQ==; yandexuid=1758388111580931457; bltsr=1; navigation_promo_seen-recalls=true',
-            'Cookie':'_csrf_token=58b9bf17d302f4fbbf3287a2bf30dda4fe2fb72585b563f2; autoru_sid=a%3Ag5fcb8bc02sbhlh52qn9n4lu0pp9j5un.554b8700bc90755ef49149fec0c1286a%7C1607175104363.604800.f9IX1HCBLa9YqgknRnpRWg.JIZvbONlVKA_4r9c5mZnaTm-onpLMj1zz5lcbgVw2uQ; autoruuid=g5fcb8bc02sbhlh52qn9n4lu0pp9j5un.554b8700bc90755ef49149fec0c1286a; suid=afbc21b5f67f69334d1804ebb97ba74d.b539c93b813155527740bdb39af11ec6; from_lifetime=1607175327785; from=google-search; counter_ga_all7=1; yuidcs=1; X-Vertis-DC=myt; yuidlt=1; yandexuid=493122311571839213; my=YwA%3D; crookie=fjp0nU5rP3C5KUj8EbcOnpYc8V1fb2zvfGJu5b1Dt0lkSY6EG3ml6+uV6Tc2PpdLX0xQkhebFuoJCZedFlNlexUqHvc=; cmtchd=MTYwNzE3NTExMDUxNQ==; bltsr=1',
+            'Cookie': '_csrf_token=1c0ed592ec162073ac34d79ce511f0e50d195f763abd8c24; autoru_sid=a%3Ag5e3b198b299o5jhpv6nlk0ro4daqbpf.fa3630dbc880ea80147c661111fb3270%7C1580931467355.604800.8HnYnADZ6dSuzP1gctE0Fw.cd59AHgDSjoJxSYHCHfDUoj-f2orbR5pKj6U0ddu1G4; autoruuid=g5e3b198b299o5jhpv6nlk0ro4daqbpf.fa3630dbc880ea80147c661111fb3270; suid=48a075680eac323f3f9ad5304157467a.bc50c5bde34519f174ccdba0bd791787; from_lifetime=1580933172327; from=yandex; X-Vertis-DC=myt; crookie=bp+bI7U7P7sm6q0mpUwAgWZrbzx3jePMKp8OPHqMwu9FdPseXCTs3bUqyAjp1fRRTDJ9Z5RZEdQLKToDLIpc7dWxb90=; gids=977; cmtchd=MTU4MDkzMTQ3MjU0NQ==; yandexuid=1758388111580931457; bltsr=1; navigation_promo_seen-recalls=true',
+            #'Cookie':'_csrf_token=58b9bf17d302f4fbbf3287a2bf30dda4fe2fb72585b563f2; autoru_sid=a%3Ag5fcb8bc02sbhlh52qn9n4lu0pp9j5un.554b8700bc90755ef49149fec0c1286a%7C1607175104363.604800.f9IX1HCBLa9YqgknRnpRWg.JIZvbONlVKA_4r9c5mZnaTm-onpLMj1zz5lcbgVw2uQ; autoruuid=g5fcb8bc02sbhlh52qn9n4lu0pp9j5un.554b8700bc90755ef49149fec0c1286a; suid=afbc21b5f67f69334d1804ebb97ba74d.b539c93b813155527740bdb39af11ec6; from_lifetime=1607175327785; from=google-search; counter_ga_all7=1; yuidcs=1; X-Vertis-DC=myt; yuidlt=1; yandexuid=493122311571839213; my=YwA%3D; crookie=fjp0nU5rP3C5KUj8EbcOnpYc8V1fb2zvfGJu5b1Dt0lkSY6EG3ml6+uV6Tc2PpdLX0xQkhebFuoJCZedFlNlexUqHvc=; cmtchd=MTYwNzE3NTExMDUxNQ==; bltsr=1',
             'Referer': f'https://auto.ru/krym/cars/{mark.lower()}/used/',
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
             'x-client-app-version': '202002.03.092255',
             '#x-client-date': '1580933207763',
             #рабочий токен
-            #'x-csrf-token': '1c0ed592ec162073ac34d79ce511f0e50d195f763abd8c24',
-            'x-csrf-token': '58b9bf17d302f4fbbf3287a2bf30dda4fe2fb72585b563f2',
+            'x-csrf-token': '1c0ed592ec162073ac34d79ce511f0e50d195f763abd8c24',
+            #'x-csrf-token': '58b9bf17d302f4fbbf3287a2bf30dda4fe2fb72585b563f2',
             'x-page-request-id': '60142cd4f0c0edf51f96fd0134c6f02a',
             'x-requested-with': 'fetch'
         }
