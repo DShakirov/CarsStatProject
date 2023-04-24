@@ -246,6 +246,6 @@ class GetCarsStats(ListView):
             'SELECT mark.id, mark.name AS markname, model.id AS modelname_id,model.name AS modelname, gen.id AS gen_id, gen.name AS genname, gen.year_from AS year_from, gen.year_to AS year_to, COUNT(*) AS counter,SUM(car.price)/COUNT(*) AS avg_price '
             'FROM carsstat_car AS car JOIN carsstat_mark AS mark ON car.mark_id = mark.id '
             'JOIN carsstat_carmodel AS model ON car.car_model_id = model.id JOIN carsstat_generation AS gen ON car.generation_id = gen.id '
-            'GROUP BY genname, mark.id, model.id ORDER BY markname, modelname, year_to')
+            'GROUP BY mark.id, model.id, gen.id ORDER BY markname, modelname, year_to')
         return object_list
 
