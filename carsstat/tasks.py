@@ -62,7 +62,7 @@ def parse():
 
         i = 0  # Переменная для перехода по объявлениям
         for i in range(len(data)):  # len(data)-1 это количество пришедших объявлений
-            sleep(1)
+            sleep(2)
             # Цвет автомобиля (возвращается в формате hex) - Done
             try:
                 color_hex = str(data[i]['color_hex'])
@@ -292,7 +292,8 @@ def parse():
     # удаляем устаревшие объявления
     try:
         time = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=7)
-        Car.objects.filter(updated_at__lt=time).delete()
+        to_delete_list = Car.objects.filter(updated_at__lt=time)
+        to_delete_list.delete()
         print('Устаревшие объявления удалены')
     except:
         pass
