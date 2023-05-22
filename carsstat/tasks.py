@@ -62,7 +62,7 @@ def parse():
 
         i = 0  # Переменная для перехода по объявлениям
         for i in range(len(data)):  # len(data)-1 это количество пришедших объявлений
-            sleep(2)
+            sleep(1)
             # Цвет автомобиля (возвращается в формате hex) - Done
             try:
                 color_hex = str(data[i]['color_hex'])
@@ -288,13 +288,17 @@ def parse():
             
 
         print(f'Mark:{mark}, Page: {str(page)}')  # Выводим сообщение, какая страница записалась
+    print('Done')  # Выводим информацию об успешном выполнении
 
-    # удаляем устаревшие объявления
+# удаляем устаревшие объявления
+@app_task
+def remove_depricated_cars():
     try:
-        time = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=7)
-        to_delete_list = Car.objects.filter(updated_at__lt=time)
-        to_delete_list.delete()
+        time_to_die = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=7)
+        delete_list = Car.objects.filter(updated_at__lte=time_to_die)
+        delete_list.delete()
         print('Устаревшие объявления удалены')
     except:
         pass
-    print('Done')  # Выводим информацию об успешном выполнении
+        print('Объявления не были удалены')
+    
