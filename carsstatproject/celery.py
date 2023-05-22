@@ -24,6 +24,10 @@ app.autodiscover_tasks()
 app.conf.beat_schedule = {
     'every': {
         'task': 'carsstat.tasks.parse',
-        'schedule': crontab(minute=10, hour=16),  # change to `crontab(minute=0, hour=0)` if you want it to run daily at midnight
+        'schedule': crontab(minute=00, hour=13),  # change to `crontab(minute=0, hour=0)` if you want it to run daily at midnight
+    },
+    'every': {
+        'task': 'carsstat.tasks.remove_depricated_cars',
+        'schedule': crontab(minute=00, hour=18),  # change to `crontab(minute=0, hour=0)` if you want it to run daily at midnight
     },
 }
